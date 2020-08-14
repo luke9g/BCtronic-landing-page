@@ -51,10 +51,10 @@ let ticking = false;
 
 function toggleStickyHeader(scroll_pos) {
     if (scroll_pos > 250) {
-        headerLogo.setAttribute("src", "./logo-cut.png")
+        headerLogo.setAttribute("src", "./images/logo-cut.png")
         header.classList.add("sticky-header")
     } else {
-        headerLogo.setAttribute("src", "./logo.png")
+        headerLogo.setAttribute("src", "./images/logo.png")
         header.classList.remove("sticky-header")
     }
 }
