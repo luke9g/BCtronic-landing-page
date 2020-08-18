@@ -67,13 +67,21 @@ html, body {
     align-items: center;
     position: relative;
 }
-.header-logo {
+.header-logo-full {
     display: block;
     width: auto;
     height: 80%;
 }
-.sticky-header .header-logo {
+.header-logo-cut {
+    display: none;
+    width: auto;
     height: 40%;
+}
+.sticky-header .header-logo-full {
+    display: none;
+}
+.sticky-header .header-logo-cut {
+    display: block;
 }
 /* .header-navigation {
     border: 1px solid blue;

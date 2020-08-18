@@ -43,18 +43,17 @@ menuLinks.forEach(function(link) {
 
 
 // Toggle sticky header on scroll --------------------------------------------------------------------------------------
-const headerLogo = document.querySelector(".header-logo")
 const header = document.querySelector(".header")
+const headerLogo = document.querySelector(".header-logo")
+const headerLogocut = document.querySelector(".header-logo-cut")
 
 let last_known_scroll_position = 0;
 let ticking = false;
 
 function toggleStickyHeader(scroll_pos) {
     if (scroll_pos > 250) {
-        headerLogo.setAttribute("src", "./images/logo-cut.png")
         header.classList.add("sticky-header")
     } else {
-        headerLogo.setAttribute("src", "./images/logo.png")
         header.classList.remove("sticky-header")
     }
 }
