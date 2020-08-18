@@ -44,8 +44,6 @@ menuLinks.forEach(function(link) {
 
 // Toggle sticky header on scroll --------------------------------------------------------------------------------------
 const header = document.querySelector(".header")
-const headerLogo = document.querySelector(".header-logo")
-const headerLogocut = document.querySelector(".header-logo-cut")
 
 let last_known_scroll_position = 0;
 let ticking = false;
