@@ -505,10 +505,12 @@ html, body {
     padding-bottom: 20px;
 } 
 .contact-title {
+    font-size: 22px;
     margin: 20px 0 25px 0;
 }
 .contact-phone,
-.contact-email {
+.contact-email,
+.contact-address {
     font-size: 18px;
 }
 .contact-email {
