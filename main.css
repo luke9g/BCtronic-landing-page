@@ -14,26 +14,34 @@ html, body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 15px;
     box-sizing: border-box;
+}
+.main-section {
+    padding: 60px 0;
 }
 .section-title {
     display: inline-block;
-    margin: 40px 0;
+    margin-bottom: 40px;
     position: relative;
     z-index: 10;
-    font-size: 30px;
+    font-size: 34px;
 }
 .section-title:before {
     content: "";
     display: block;
     position: absolute;
+    z-index: -10;
     bottom: 0px;
     width: calc(100% + 20px);
     height: 50%;
-    /* background-color: #ffbd4a; */
     background-color: #ffba77;
-    z-index: -10;
+    border-radius: 4px;
+}
+@media only screen and (min-width: 768px) {
+    html, body {
+        font-size: 18px;
+    }
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -70,7 +78,7 @@ html, body {
 .header-logo-full {
     display: block;
     width: auto;
-    height: 80%;
+    height: 75%;
 }
 .header-logo-cut {
     display: none;
@@ -237,13 +245,13 @@ html, body {
 .hero-section .hero-title {
     font-size: calc(28px + 1vw);
     font-weight: bold;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 .hero-section .hero-message {
     font-size: calc(18px + 0.5vw);
     font-weight: normal;
-    color: white;
+    color: #fff;
     text-align: center;
     margin: 20px 0 60px 0;
 }
@@ -281,28 +289,33 @@ html, body {
 
 /* -------------------------------------------------- Section offer ------------------------------------------------- */
 .offer-section {
-    background-color: white;
+    background-color: #fff;
 }
 .offer-section .offer-items-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
-    padding-bottom: 40px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* margin: 0 -10px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
 }
 .offer-section .offer-item {
-    flex: 1;
-    min-width: 300px;
-    padding: 0 10px 20px 10px;
-    /* border: 1px solid red; */
+    width: 100%;
+    /* flex: 1;
+    min-width: 300px; */
+    /* margin: 0 10px 20px 10px; */
+    padding: 20px 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
     box-sizing: border-box;
+    border-radius: 10px; 
+}
+.offer-section .offer-item:hover {
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.15);
 }
 .offer-section .offer-icon {
     width: 75px;
     height: 75px;
     margin: 0 auto;
-    background-color: lightskyblue;
-    /* border-radius: 50%;  */
-    /* border: 5px solid blue; */
 }
 .offer-section .offer-design {
     background: url("./icons/offer-design.svg") center / contain no-repeat;
@@ -315,36 +328,115 @@ html, body {
 }
 .offer-section .offer-title {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
+    font-size: 22px;
 }
 .offer-section .offer-info {
     line-height: 1.6em;
+    margin-bottom: 5px;
+}
+.offer-section .offer-listing {
+    line-height: 1.6em;
+    list-style: none;
+}
+.offer-section .offer-listing li:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    width: 10px;
+    margin-right: 15px;
+    background-image: url("./icons/list-marker-dot.svg");
+    background-size: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .offer-section .offer-item {
+        padding: 25px 20px;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------- Section achievements ----------------------------------------------- */
+.achievements-section {
+    background-color: #c1c1c1;
+    /* background-color: #004588; */
+    background-color: #003264;
+    background-image: url("./images/circuit-board.svg");
+    background-attachment: fixed;
+    background-size: 350px;
+}
+.achievements-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.achievement-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px 15px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+}
+.achievement-number {
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: inline-block;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.achievement-number:before {
+    content: '\2713';
+    transform: translateX(-150%);
+    position: absolute;
+    display: block;
+    color: #ffba77;
+}
+.achievement-info {
+    font-size: 20px;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------ Section portfolio ----------------------------------------------- */
 .portfolio-section {
-    background-color: white;
+    background-color: #fff;
 }
 .portfolio-section .portfolio-items-container {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0 -10px;
-    padding-bottom: 40px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* margin: 0 -10px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
 }
 .portfolio-section .portfolio-item {
-    flex: 1;
-    min-width: 320px;
-    padding: 0 10px 20px 10px;
-    /* border: 1px solid red; */
+    width: 100%;
+    /* flex: 1; */
+    /* min-width: 320px; */
+    /* margin: 0 10px 20px 10px; */
+    padding: 20px 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
     box-sizing: border-box;
+    border-radius: 10px;
+    list-style: none;
+}
+.portfolio-section .portfolio-item:hover {
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.15);
 }
 .portfolio-section .portfolio-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 22px;
 }
 .portfolio-section .portfolio-info {
     line-height: 1.6em;
+}
+@media only screen and (min-width: 768px) {
+    .offer-section .offer-item {
+        padding: 25px 20px;
+    }
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -356,7 +448,6 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
-    padding-bottom: 40px;
 }
 .about-us-item {
     flex: 1;
@@ -376,53 +467,24 @@ html, body {
     padding: 0 10px 20px 10px;
 }
 .about-us-info .about-us-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 22px;
 }
 .about-us-info .about-us-details {
     line-height: 1.6em;
 }
 .about-us-info .about-us-details:first-of-type {
-    margin-bottom: 20px;
-}
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-/* --------------------------------------------- Section achievements ----------------------------------------------- */
-.achievements-section {
-    background-color: #c1c1c1;
-}
-.achievements-items-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
-    padding: 40px 0;
-}
-.achievement-item {
-    flex: 1;
-    min-width: 200px;
-    padding: 20px 10px;
-    /* border: 1px solid red; */
-    box-sizing: border-box;
-    text-align: center;
-}
-.achievement-number {
-    font-size: 34px;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 5px;
-}
-.achievement-info {
-    font-size: 20px;
+    margin-bottom: 15px;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------ Section contact ------------------------------------------------- */
 .contact-section {
-    background-color: white;
+    background-color: #fff;
 }
 .contact-section .contact-items-container {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 40px;
 }
 .contact-item {
     flex: 1;
@@ -435,7 +497,6 @@ html, body {
     width: 100%;
 }
 .contact-map {
-    /* 20px - sum of left and right padding of .contact-info */
     flex-basis: 33.3333%; 
 }
 .contact-info {
@@ -444,14 +505,14 @@ html, body {
     padding-bottom: 20px;
 } 
 .contact-title {
-    margin: 20px 0;
+    margin: 20px 0 25px 0;
 }
 .contact-phone,
 .contact-email {
     font-size: 18px;
 }
 .contact-email {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .contact-phone::before,
 .contact-email::before
@@ -470,7 +531,7 @@ html, body {
     background: url(./icons/mail.svg) 0px 50% / contain no-repeat;
 }
 .contact-address {
-    font-size: 18px;
+    margin-bottom: 40px;
 }
 .contact-link {
     color: unset;
@@ -501,13 +562,12 @@ html, body {
 }
 .contact-facebook {
     margin-top: auto;
-    padding-top: 40px;
-    font-size: 18px;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
 .footer {
+    padding: 40px 0 40px 0;
     background-color: #444;
     text-align: center;
 }
@@ -515,11 +575,10 @@ html, body {
     display: inline-block;
     width: 100px;
     height: auto;
-    margin: 40px 0 20px 0;
+    margin-bottom: 20px;
 }
 .footer-copyright {
     color: #fff;
     font-size: 14;
-    padding-bottom: 20px;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
