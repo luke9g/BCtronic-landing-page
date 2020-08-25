@@ -154,6 +154,7 @@ html, body {
 .hamburger--active + .menu {
     transform: translateY(100%);
     visibility: visible;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.1);
 }
 .menu-element {
     text-align: center;
@@ -205,6 +206,7 @@ html, body {
     }
     .hamburger--active + .menu {
         transform: unset;
+        box-shadow: none;
     }
     /* --------------------------------------- */
     .menu-element + .menu-element {
