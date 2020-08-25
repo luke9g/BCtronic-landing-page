@@ -78,6 +78,12 @@ html, body {
 .header-logo-link {
     display: block;
 }
+.header-logo-link:focus {
+    outline: 2px solid #de8b00;
+}
+.header-logo-link:focus:active {
+    outline: none;
+}
 .header-logo-full {
     display: block;
     width: auto;
@@ -577,13 +583,19 @@ html, body {
     text-align: center;
 }
 .footer-logo-link {
-    display: block;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer-logo-link:focus {
+    outline: 2px solid #de8b00;
+}
+.footer-logo-link:active {
+    outline: none;
 }
 .footer-logo {
     display: inline-block;
     width: 100px;
     height: auto;
-    margin-bottom: 20px;
 }
 .footer-copyright {
     color: #fff;
