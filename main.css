@@ -75,15 +75,18 @@ html, body {
     align-items: center;
     position: relative;
 }
+.header-logo-link {
+    display: block;
+}
 .header-logo-full {
     display: block;
     width: auto;
-    height: 75%;
+    height: 75px;
 }
 .header-logo-cut {
     display: none;
     width: auto;
-    height: 40%;
+    height: 20px;
 }
 .sticky-header .header-logo-full {
     display: none;
@@ -572,6 +575,9 @@ html, body {
     padding: 40px 0 40px 0;
     background-color: #444;
     text-align: center;
+}
+.footer-logo-link {
+    display: block;
 }
 .footer-logo {
     display: inline-block;
