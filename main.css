@@ -77,6 +77,7 @@ html, body {
 }
 .header-logo-link {
     display: block;
+    cursor: pointer;
 }
 .header-logo-link:focus {
     outline: 2px solid #de8b00;
@@ -185,6 +186,7 @@ html, body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .menu-link:focus {
     outline: 2px solid #de8b00;
@@ -340,7 +342,7 @@ html, body {
 .offer-section .offer-title {
     text-align: center;
     margin: 25px 0;
-    font-size: 22px;
+    font-size: 21px;
 }
 .offer-section .offer-info {
     line-height: 1.6em;
@@ -439,7 +441,7 @@ html, body {
 }
 .portfolio-section .portfolio-title {
     margin-bottom: 25px;
-    font-size: 22px;
+    font-size: 21px;
 }
 .portfolio-section .portfolio-info {
     line-height: 1.6em;
@@ -453,17 +455,17 @@ html, body {
 
 /* ------------------------------------------------ Section about us ------------------------------------------------ */
 .about-us-section {
-    background-color: lightgray;
+    background-color: #e1e1e1;
 }
 .about-us-items-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin: 0 -7.5px -20px -7.5px;
 }
 .about-us-item {
     flex: 1;
     min-width: 300px;
-    padding: 0 10px 20px 10px;
+    margin: 0 7.5px 20px 7.5px;
     /* border: 1px solid red; */
     box-sizing: border-box;
 }
@@ -472,14 +474,11 @@ html, body {
     width: auto;
     height: 450px;
     object-fit: cover;
-    flex-basis: calc(0% + 20px);
-}
-.about-us-info {
-    padding: 0 10px 20px 10px;
+    border-radius: 10px;
 }
 .about-us-info .about-us-title {
     margin-bottom: 25px;
-    font-size: 22px;
+    font-size: 21px;
 }
 .about-us-info .about-us-details {
     line-height: 1.6em;
@@ -496,40 +495,49 @@ html, body {
 .contact-section .contact-items-container {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -7.5px -20px -7.5px;
 }
 .contact-item {
     flex: 1;
     min-width: 300px;
     /* border: 1px solid red; */
     box-sizing: border-box;
+    margin: 0 7.5px 20px 7.5px;
+}
+.contact-info {
+    flex-basis: 0%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} 
+.contact-map {
+    flex-basis: 33.3333%; 
 }
 .contact-section .iframe-map {
     display: block;
     width: 100%;
+    border-radius: 10px;
 }
-.contact-map {
-    flex-basis: 33.3333%; 
-}
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-} 
 .contact-title {
-    font-size: 22px;
-    margin: 20px 0 25px 0;
+    font-size: 21px;
+    margin: 0 0 25px 0;
 }
 .contact-phone,
 .contact-email,
-.contact-address {
+.contact-address,
+.contact-facebook {
     font-size: 18px;
+    line-height: 1.4em;
+    /* border: 1px solid red; */
 }
+.contact-phone,
 .contact-email {
-    margin-bottom: 25px;
+    padding-bottom: 7.5px;
+    margin-bottom: 7.5px;
+    border-bottom: 1px solid #e1e1e1;
 }
 .contact-phone::before,
-.contact-email::before
- {
+.contact-email::before {
     content: "";
     display: inline-block;
     width: 16px;
@@ -549,6 +557,7 @@ html, body {
 .contact-link {
     color: unset;
     text-decoration: none;
+    cursor: pointer;
 }
 .contact-link:focus {
     outline: 2px solid #de8b00;
@@ -558,9 +567,9 @@ html, body {
     text-decoration-color: #004588;
 }
 .facebook-link {
+    display: block;
     text-decoration: underline;
     text-decoration-color: #1877f2;
-    display: inline-block;
 }
 .facebook-link:hover {
     color: #1877f2;
@@ -569,8 +578,8 @@ html, body {
 .facebook-icon {
     display: inline-block;
     vertical-align: middle;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 7px;
 }
 .contact-facebook {
@@ -580,13 +589,14 @@ html, body {
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
 .footer {
-    padding: 40px 0 40px 0;
+    padding: 30px 0;
     background-color: #444;
     text-align: center;
 }
 .footer-logo-link {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 .footer-logo-link:focus {
     outline: 2px solid #de8b00;
