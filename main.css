@@ -36,7 +36,8 @@ html, body {
     width: calc(100% + 20px);
     height: 50%;
     background-color: #ffba77;
-    border-radius: 4px;
+    border-radius: 5px;
+    transform: rotate(-1.5deg);
 }
 @media only screen and (min-width: 768px) {
     html, body {
@@ -220,6 +221,7 @@ html, body {
     .menu-element:after {
         bottom: 12px;
         height: 3px;
+        border-radius: 3px;
         width: 0;
         transition: width 0.2s ease-out;
     }
@@ -399,14 +401,16 @@ html, body {
     margin-bottom: 5px;
     display: inline-block;
     position: relative;
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
 }
 .achievement-number:before {
     content: '\2713';
-    transform: translateX(-150%);
+    transform: translateX(-120%);
     position: absolute;
     display: block;
     color: #ffba77;
+    font-size: 48px;
+    /* border: 1px solid red; */
 }
 .achievement-info {
     font-size: 20px;
@@ -455,19 +459,24 @@ html, body {
 
 /* ------------------------------------------------ Section about us ------------------------------------------------ */
 .about-us-section {
-    background-color: #e1e1e1;
+    background-color: #efefef;
 }
 .about-us-items-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -7.5px -20px -7.5px;
+    margin: 0 -30px -40px -30px;
 }
 .about-us-item {
     flex: 1;
     min-width: 300px;
-    margin: 0 7.5px 20px 7.5px;
+    margin: 0 30px 40px 30px;
     /* border: 1px solid red; */
     box-sizing: border-box;
+}
+.about-us-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .about-us-photo {
     display: block;
@@ -477,8 +486,25 @@ html, body {
     border-radius: 10px;
 }
 .about-us-info .about-us-title {
-    margin-bottom: 25px;
-    font-size: 21px;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.about-us-info .underline {
+    position: relative;
+}
+.about-us-info .underline:after {
+    content: "";
+    display: block;
+    width: 110%;
+    height: 1em;
+    position: absolute;
+    top: 100%;
+    left: calc(0px - 5%);
+    background-image: url("./icons/underline.svg");
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .about-us-info .about-us-details {
     line-height: 1.6em;

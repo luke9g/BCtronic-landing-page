@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="header-wrapper">
+    <div class="header-wrapper" id="header-top">
         <header class="header">
             <div class="main-container">
                 <a class="header-logo-link" href="./index.html">
@@ -200,13 +200,13 @@
 
     <section class="main-section about-us-section" id="about-us">
         <div class="main-container">
-            <h2 class="section-title">
+            <h2 class="section-title" style="display: none;">
                 O nas
             </h2>
             <div class="about-us-items-container">
                 <div class="about-us-item about-us-info">
                     <h3 class="about-us-title">
-                        Podtytuł sekcji o nas
+                        Kilka słów <span class="underline">o nas...</span>
                     </h3>
                     <p class="about-us-details">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, voluptatum animi molestias 
@@ -260,7 +260,7 @@
                     </div>
                 </div>
                 <div class="contact-item contact-map">
-                    <iframe class="iframe-map" aria-hidden="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19667.96591967782!2d20.135901920677473!3d51.96138637574524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471960456042981b%3A0x6eac91ad469285f!2sSierakowicka%2022%2C%2096-100%20Skierniewice!5e0!3m2!1sen!2spl!4v1596037620149!5m2!1sen!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe class="iframe-map" aria-hidden="true" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19667.96591967782!2d20.135901920677473!3d51.96138637574524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471960456042981b%3A0x6eac91ad469285f!2sSierakowicka%2022%2C%2096-100%20Skierniewice!5e0!3m2!1sen!2spl!4v1596037620149!5m2!1sen!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
@@ -268,7 +268,7 @@
 
     <footer class="footer">
         <div class="main-container">
-            <a class="footer-logo-link" href="./index.html">
+            <a class="footer-logo-link" href="#header-top">
                 <img class="footer-logo" src="./images/logo-white.png" alt="logo BCtronic"/>
             </a>
             <p class="footer-copyright">
