@@ -208,7 +208,7 @@ html, body {
         padding: 0;
     }
     .hamburger--active + .menu {
-        transform: unset;
+        transform: none;
         box-shadow: none;
     }
     /* --------------------------------------- */
