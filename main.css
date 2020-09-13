@@ -37,7 +37,6 @@ html, body {
     height: 50%;
     background-color: #ffba77;
     border-radius: 5px;
-    transform: rotate(-1.5deg);
 }
 @media only screen and (min-width: 768px) {
     html, body {
